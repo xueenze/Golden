@@ -61,7 +61,8 @@ module.exports = {
 				use: [
 					MiniCssExtractPlugin.loader,
 					'css-loader',
-					'less-loader'
+					'less-loader',
+					'postcss-loader'
 				]
 			},
 			{
@@ -100,6 +101,6 @@ module.exports = {
 	devServer: {
 		host: '0.0.0.0',
 		port: 8081,
-		open: true,
+		quiet: true,
 	}
 };

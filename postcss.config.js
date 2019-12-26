@@ -1,5 +1,6 @@
+// CSS后处理
 module.exports = {
-    plugins: {
-        autoprefixer: {}
-    }
-}
+    plugins: [
+      require('autoprefixer'),
+    ],
+};

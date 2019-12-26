@@ -5,3 +5,119 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
 ol,ul,li { 
     list-style:none;
 }
+
+body{
+    background-color: #3e2411;
+
+    .loading-content {
+        display: none;
+    }
+}
+
+body.loading{
+    background-image: url(https://ant-static.gtfund.com/static/alipay-mini-app-assets/golden/webview/static/Images/loading_bg.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-color: #ffffff;
+    position: relative;
+
+    .loading-content{
+        width: 5.8rem;
+        height: 5.4rem;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+
+        .golden{
+            display: block;
+            background-image: url(https://ant-static.gtfund.com/static/alipay-mini-app-assets/golden/webview/static/Images/loading_golden.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 1.86rem;
+            height: 1.84rem;
+        }
+
+        .house{
+            display: block;
+            background-image: url(https://ant-static.gtfund.com/static/alipay-mini-app-assets/golden/webview/static/Images/loading_house.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 5.61rem;
+            height: 2.64rem;
+        }
+
+        .bar{
+            position: relative;
+            width: 5.7rem;
+            height: 1.2rem;
+
+            &-bg{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 2;
+                height: 0.4rem;
+                width: 100%;
+                border-radius: 0.2rem;
+                background: linear-gradient(#ffb337, #ff812c);
+                border: 1px solid #ffb336;
+            }
+
+            &-active{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 3;
+                height: 0.4rem;
+                width: 0;
+                border-top-left-radius: 0.2rem;
+                border-bottom-left-radius: 0.2rem;
+                background-image: linear-gradient(to right,#fec43c, #fdf664);
+            }
+
+            &-car{
+                display: block;
+                background-image: url(https://ant-static.gtfund.com/static/alipay-mini-app-assets/golden/webview/static/Images/loading_car.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 3;
+                width: 1.2rem;
+                height: 0.9rem;
+                left: 0;
+            }
+        }
+
+
+        .bar-progress{
+            font-size: 0.4rem;
+            text-align: center;
+            color: #ff6633;
+        }
+    }
+}
+
+.animate-bounce{
+    animation-duration: 1.5s; 
+    animation-name: bounce-up-down;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes bounce-up-down{
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-0.3rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
